@@ -24,7 +24,7 @@ func main() {
 	router.Use(middleware.RequestID)
 	router.Use(middleware.RealIP)
 	router.Use(middleware.Recoverer)
-	router.Use(middleware.Timeout(60 * time.Second)) // timeout after 60 seconds
+	router.Use(middleware.Timeout(60 * time.Second)) // timeout request after 60 seconds
 
 	// Routes
 	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
