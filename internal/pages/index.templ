@@ -1,0 +1,31 @@
+package pages
+
+templ Index() {
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Index</title>
+      <link rel="stylesheet" href="/public/css/mvp.css" />
+      <script src="/public/js/htmx.min.js"></script>
+    </head>
+    <body>
+      <header>
+        <nav>
+          <ul>
+            <li>Home</li>
+          </ul>
+        </nav>
+
+        <h1>An <u>example</u> HAG (HTMX, AlpineJS, Go) stack web app.</h1>
+      </header>
+
+      <main>
+        <div id="welcome">
+          <h3 id="welcome-message">What's your name?</h3>
+          <input name="name" placeholder="Name" />
+          <button hx-post="/clicked" hx-include="[name='name']" hx-target="#welcome-message" hx-swap="outerHTML">Submit</button> 
+        </div>
+      </main>
+    </body>
+  </html>
+}
