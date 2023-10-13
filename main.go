@@ -33,10 +33,6 @@ func main() {
 
 	router.Post("/clicked", func(w http.ResponseWriter, r *http.Request) {
 		r.ParseForm()
-		for k, v := range r.Form {
-			log.Printf("Key: %s, Value: %s", k, v)
-		}
-
 		components.Welcome(r.FormValue("name")).Render(r.Context(), w)
 	})
 
