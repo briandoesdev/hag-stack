@@ -22,7 +22,7 @@ func Welcome(name string) templ.Component {
 			var_1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, err = templBuffer.WriteString("<h3>")
+		_, err = templBuffer.WriteString("<h3 id=\"welcome-message\">")
 		if err != nil {
 			return err
 		}

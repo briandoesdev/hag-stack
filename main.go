@@ -32,7 +32,10 @@ func main() {
 	})
 
 	router.Post("/clicked", func(w http.ResponseWriter, r *http.Request) {
+		is_htmx := r.Header.Get("HX-Request")
+		log.Println("HTMX Request:", is_htmx)
 		r.ParseForm()
+
 		components.Welcome(r.FormValue("name")).Render(r.Context(), w)
 	})
 

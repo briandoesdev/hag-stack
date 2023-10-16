@@ -40,12 +40,21 @@ func Index() templ.Component {
 		if err != nil {
 			return err
 		}
+		_, err = templBuffer.WriteString("</script><script defer src=\"/public/js/alpine.min.js\">")
+		if err != nil {
+			return err
+		}
+		var_4 := ``
+		_, err = templBuffer.WriteString(var_4)
+		if err != nil {
+			return err
+		}
 		_, err = templBuffer.WriteString("</script></head><body><header><nav><ul><li>")
 		if err != nil {
 			return err
 		}
-		var_4 := `Home`
-		_, err = templBuffer.WriteString(var_4)
+		var_5 := `Home`
+		_, err = templBuffer.WriteString(var_5)
 		if err != nil {
 			return err
 		}
@@ -53,8 +62,8 @@ func Index() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_5 := `An `
-		_, err = templBuffer.WriteString(var_5)
+		var_6 := `An example `
+		_, err = templBuffer.WriteString(var_6)
 		if err != nil {
 			return err
 		}
@@ -62,8 +71,8 @@ func Index() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_6 := `example`
-		_, err = templBuffer.WriteString(var_6)
+		var_7 := `HAG`
+		_, err = templBuffer.WriteString(var_7)
 		if err != nil {
 			return err
 		}
@@ -71,8 +80,8 @@ func Index() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_7 := `HAG (HTMX, AlpineJS, Go) stack web app.`
-		_, err = templBuffer.WriteString(var_7)
+		var_8 := `(HTMX, AlpineJS, Go) stack web app.`
+		_, err = templBuffer.WriteString(var_8)
 		if err != nil {
 			return err
 		}
@@ -80,8 +89,8 @@ func Index() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_8 := `What's your name?`
-		_, err = templBuffer.WriteString(var_8)
+		var_9 := `What's your name?`
+		_, err = templBuffer.WriteString(var_9)
 		if err != nil {
 			return err
 		}
@@ -89,8 +98,8 @@ func Index() templ.Component {
 		if err != nil {
 			return err
 		}
-		var_9 := `Submit`
-		_, err = templBuffer.WriteString(var_9)
+		var_10 := `Submit`
+		_, err = templBuffer.WriteString(var_10)
 		if err != nil {
 			return err
 		}
